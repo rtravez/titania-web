@@ -1,11 +1,11 @@
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import {environment} from 'src/environments/environment';
-import {GenericService} from './generic.service';
-import {Router} from '@angular/router';
-import {User} from "../models/user";
-import {Buffer} from "buffer";
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { GenericService } from './generic.service';
+import { Router } from '@angular/router';
+import { User } from "../models/user";
+import { Buffer } from "buffer";
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +13,7 @@ import {Buffer} from "buffer";
 export class AuthService extends GenericService<User, number> {
   private _user: User;
   private _token: string;
-  private credenciales = Buffer.from('sofka-web' + ':' + 'sofka-web').toString('base64');
+  private credenciales = Buffer.from('titania-web' + ':' + '12345').toString('base64');
   private params = new URLSearchParams();
   private httpHeaders: HttpHeaders = new HttpHeaders({
     'Content-Type': 'application/x-www-form-urlencoded',
